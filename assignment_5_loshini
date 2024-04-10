@@ -1,0 +1,206 @@
+class mall:
+    def __init__(self,product,product_id,product_price,product_color):
+        self.product=product
+        self.product_id=product_id
+        self.product_price=product_price
+        self.product_color=product_color
+    def sales(self):
+        if self.product_price >=15000:
+            return("product has offer")
+        else:
+            return("product has no offer")
+        
+    def recommend(self):
+        
+        if self.product_color=="white" or self.product_color=="grey":
+            return("product recommend to purchase")
+        else:
+            return("product available")
+    
+check=mall(product_price=13000,product="tab",product_id=4356,product_color="grey")
+print(check.sales())
+print(check.recommend())
+
+'''output:
+product has no offer
+product recommend to purchase'''
+
+
+class Mob_Showroom:
+
+    def Customer_Details():
+        print("customer_name:")
+        cust_name=["emile","shoba","sanjay","varun"]
+        for i in cust_name:
+            print(i)
+
+    def Mobile_Details():
+        print("mobile_name:")
+        mob_brand=["oneplus","vivo","realme","redmi"]
+
+        if "oneplus" in mob_brand:
+            return ("oneplus brand is available")
+        else:
+            return("not available")
+    
+    def Purchase():
+        cust_name=["emile","shoba","ram","varun"]
+        mob_brand=["oneplus","samsung","realme","nokia"]
+        print("purchase:")
+
+        if "emile" in cust_name and "realme" in mob_brand:
+            return("emile buy realme mobile")
+        else:
+            return("emile not buy mobile")
+
+    def Mobile_price():
+        cust_name=["emile","shoba","sanjay","varun"]
+        mob_brand=["oneplus","samsung","realme","redmi"]
+        mob_price={"oneplus":35000,"samsung":30000,"realme":25000,"redmi":20000}
+        print("mobile_price:")
+        
+        if "varun" in cust_name and "oneplus"==35000 in mob_price:
+            return("varun buy the mobile")
+        else:
+            return("Not buy mobile")
+
+
+Mob_Showroom.Customer_Details()
+print(Mob_Showroom.Mobile_Details())
+print(Mob_Showroom.Purchase())
+print(Mob_Showroom.Mobile_price())
+
+'''output:
+customer_name:
+emile
+shoba
+sanjay
+varun
+mobile_name:
+oneplus brand is available
+purchase:
+emile buy realme mobile
+mobile_price:
+Not buy mobile'''
+
+
+import numpy as np
+def array():
+    arr=np.array([1,2,3,4])
+    return(arr[2]+arr[3])
+print(array())
+
+#output:7
+
+class supermarket:
+    
+    def fruit_shop():
+        fruits=("apple","orange","grapes","pomegranate")
+        print("fruits:")
+        return (fruits)
+    
+    def fruit_buy():
+        fruits=("apple","orange","grapes","pomegranate")
+        print("fruit buy:")
+        
+        if fruits=="apple" and fruits=="dragon fruit":
+            return ("take order to buy ")
+        else:
+            return("cancel order")
+    
+    def fruits_price():
+        print("price:")
+        price={"apple":150,"orange":100,"grapes":120,"pomegranate":140} 
+        return(price)
+    
+    def buy():
+        amt=[150,100,110,140]
+        print("refered_price:")
+        for i in amt:
+            if i<130:
+                print(i)
+        else:
+            return("no refered amt")
+        
+    def snacks():
+        snack=("chocolate","juice","biscuit")
+        print("snack:")
+        for i in snack:
+            if i == "biscuit":
+                return("biscuit available")
+        else:
+            return(" sorry,no preferable snack")
+        
+    def shampoo():
+        shampoo_brand = ["clinic plus","sunsilk","dove","karthika"]
+        print("shampoo_brand:")
+        for i in shampoo_brand:
+            print(i)
+            
+    def soap_price():
+        soap_price=[40,35,50]
+        print("soap_price:")
+        
+        for soap in soap_price:
+            if soap<40:
+                print (soap)
+                
+    def soap_brands():
+        soap_brand=["dove","medimix","mysoresandhal"] 
+        print("soap_brand:")
+        
+        for brand in soap_brand:
+            if brand == "mysoresandhal":
+                return("your soap available")
+        else:
+            return("sorry,refer other brand")
+        
+    def paste_brands():
+        paste_brand=["colgate","dabur","sensodine"]
+        print("paste_brand:")
+        
+        for paste in paste_brand:
+            if paste== "breek":
+                return("here your paste")
+        else:
+            return("sorry for inconvinence,not avail")
+        
+    
+print(supermarket.fruit_shop())
+print(supermarket.fruit_buy())
+print(supermarket.fruits_price())
+supermarket.buy()
+print(supermarket.snacks())
+supermarket.shampoo()
+supermarket.soap_price()
+print(supermarket.soap_brands())
+print(supermarket.paste_brands())
+'''
+output:
+fruits:
+('apple', 'orange', 'grapes', 'pomegranate')
+fruit buy:
+cancel order  
+price:
+{'apple': 150, 'orange': 100, 'grapes': 120, 'pomegranate': 140}
+refered_price:
+100
+110
+snack:
+biscuit available
+shampoo_brand:
+clinic plus
+sunsilk
+dove
+karthika
+soap_price:
+35
+soap_brand:
+your soap available
+paste_brand:
+sorry for inconvinence,not avail
+'''
+
+
+
+
